@@ -35,6 +35,17 @@ const product = mongoose.model('productModel', productSchema);
 const user = mongoose.model('userModel', userSchema);
 
 
+//Express middleware kullanımı. Önce burası daha sonra istek blokları çalışır
+
+var myLogger = function (req, res, next) {
+    console.log('LOGGED')
+    next()
+  }
+  
+  app.use(myLogger)
+
+
+
 app.get('/user',(req,res)=>{
 
     user.find({},(err,doc)=>{
