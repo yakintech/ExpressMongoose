@@ -1,0 +1,4 @@
+1) Mlab üzerinden bir mongodb aç 
+2) mongoose ile bu veritabanını bağla
+3) örnek bir şema oluştur
+4) bu şemaya bir insert işlemi gerçekleştir
