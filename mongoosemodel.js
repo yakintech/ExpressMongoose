@@ -25,7 +25,8 @@ const productSchema = new Schema({
 const userSchema = new Schema({
     name: String,
     surname: String,
-    email: String
+    email: String,
+    country:String
 })
 
 
