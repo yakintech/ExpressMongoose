@@ -23,10 +23,11 @@ const productSchema = new Schema({
 });
 
 const userSchema = new Schema({
-    name: String,
+    name: {type:String, required:true },
     surname: String,
     email: String,
-    country:String
+    country:String,
+    age:Number
 })
 
 
@@ -40,10 +41,12 @@ const user = mongoose.model('userModel', userSchema);
 //insert işlemi
 
 // var insertuser = new user();
-// insertuser.name = "Çağatay";
-// insertuser.surname = "Yılan";
+// insertuser.name = "Çağatay8";
+// insertuser.surname = "Yılan8";
 // insertuser.email = "test@bilgeadam.com";
 // insertuser.country = "Turkey";
+// insertuser.age = 38;
+
 
 // insertuser.save();
 // insertuser.save((err,doc)=>{
@@ -128,7 +131,36 @@ const user = mongoose.model('userModel', userSchema);
 //     }
 // })
 
+//age kolonu 33 ile 40 arasındakiler
+// user.find({ age: { $gt: 33, $lt: 40 }},(err,doc)=>{
+//     if(!err){
+//         console.log(doc);
+//     }
+// })
 
+
+//Çağatay ve Halileri buluyor
+// user.find({ name: { $in: ['Çağatay','Halil'] }},(err,doc)=>{
+//     if(!err){
+//         console.log(doc);
+//     }
+// })
+
+
+//İlk 3 user getir
+// user.find({}).limit(3).exec((err,doc)=>{
+//     if(!err){
+//         console.log(doc);
+//     }
+// })
+
+
+//userları name e göre sırala ( Türkçede hata veriyor!! )
+// user.find({}).sort('-name').exec((err,doc)=>{
+//     if(!err){
+//         console.log(doc);
+//     }
+// })
 
 
 
