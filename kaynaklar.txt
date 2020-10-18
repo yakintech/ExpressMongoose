@@ -1,0 +1,5 @@
+port nedir?
+restful nedir?
+https://aws.amazon.com/tr/nosql/
+Nosql => redis - cassandra - mongo
+SQL => MSSQL - MYSQL - PostgreSQL - ORACLE
